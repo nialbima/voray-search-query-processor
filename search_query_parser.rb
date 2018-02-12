@@ -32,8 +32,6 @@ class SearchQueryParser
   end
 
   def extract_from_str(str)
-    # I this was easier than something like iterating through it.
-    # I'm not sure whether it's more efficient.
     str = str.split(" ").join(" ")
     if str.match(TAG_REGEX)
       # Set lookup is way, way faster than arr lookup, and it already enforces
